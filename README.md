@@ -43,10 +43,10 @@ git log
 3. Файлы в git бывают tracked, untracket. В свою очередь, tracked файлы делятся на modified, staged.  Рассмотрим схему жизненного цикла файла в git:
 ```mermaid
 graph LR;
-untracked --- "git add" --> trackedAndStaged;
-trackedAndStaged --- "git commit" --> tracked;
+untracked -- "git add" --> trackedAndStaged;
+trackedAndStaged -- "git commit" --> tracked;
 tracked --> trackedAndModified;
-trackedAndModified --- "git add" --> trackedAndStaged;
+trackedAndModified -- "git add" --> trackedAndStaged;
 ```
 Посмотреть статус файла можно командой:
 ```bash
